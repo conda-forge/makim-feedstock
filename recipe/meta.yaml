@@ -33,7 +33,7 @@ requirements:
     - colorama >=0.4.6
 
 test:
-  source_files:
+  files:
     - .makim.yaml
   imports:
     - makim

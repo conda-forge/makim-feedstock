@@ -1,7 +1,8 @@
 version: 1.0
 
 groups:
-  targets:
-    default:
-      run: |
-        echo "Hello World!"
+  group1:
+    targets:
+      default:
+        run: |
+          echo "Hello World!"
