@@ -1,5 +1,5 @@
 {% set name = "makim" %}
-{% set version = "1.12.0" %}
+{% set version = "1.12.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/makim-{{ version }}.tar.gz
-  sha256: cfd7bd4da0dbabc160d1a9fbe5774c2e01359db02bfb55b659bf3bcd867db0d2
+  sha256: 9fe8cdf4e4da9da6fcddf55f1ec0f71ce95fa48196d0287ccfbb328e19b245e5
 
 build:
   entry_points:
@@ -34,6 +34,8 @@ requirements:
     - typer >=0.9.0
     - fuzzywuzzy >=0.18.0
     - python-levenshtein >=0.23.0
+    - rich >=13.7.0
+    - shellingham >=1.5.4
 
 test:
   files:
