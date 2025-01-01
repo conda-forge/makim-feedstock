@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/makim-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/makim-{{ version }}.tar.gz
   sha256: b269e68921e919edf53a189379f5aaa6787c2346d3081bf823a6b4ded193bfab
 
 build:
@@ -14,17 +14,17 @@ build:
     - makim = makim.__main__:run_app
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.8,<4.0
+    - python {{ python_min }}
     - poetry-core >=1.0.0
     - poetry >=1.5.1
     - pip
   run:
     - __unix
-    - python >=3.8.1,<4.0.0
+    - python >={{ python_min }},<4.0.0
     - sh >=2.0.0
     - pyyaml >=5.0
     - jinja2 >=2.0
@@ -46,6 +46,7 @@ test:
     - makim --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/osl-incubator/makim
