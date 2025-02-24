@@ -36,6 +36,9 @@ requirements:
     - rich >=13.7.0
     - shellingham >=1.5.4
     - jsonschema >=4
+    - paramiko >= 3.5.0
+    - apscheduler >=3.11.0,<4.0.0
+    - sqlalchemy >=2.0.37,<3.0.0
 
 test:
   files:
