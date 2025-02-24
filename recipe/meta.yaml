@@ -1,5 +1,5 @@
 {% set name = "makim" %}
-{% set version = "1.18.1" %}
+{% set version = "1.22.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/makim-{{ version }}.tar.gz
-  sha256: b269e68921e919edf53a189379f5aaa6787c2346d3081bf823a6b4ded193bfab
+  sha256: 433dc969d456a459c255c872ce4a8ec02bd6e25e33407a5c043e3a913e6a2138
 
 build:
   entry_points:
     - makim = makim.__main__:run_app
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
