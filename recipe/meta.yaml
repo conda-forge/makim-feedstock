@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/makim-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/makim-{{ version }}.tar.gz
   sha256: 3f1ca5b6653225d86870e9f714de89b29c22ceec1e23f3da82167eb03c7300e4
 
 build:
