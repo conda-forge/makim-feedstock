@@ -1,5 +1,5 @@
 {% set name = "makim" %}
-{% set version = "1.22.0" %}
+{% set version = "1.23.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/makim-{{ version }}.tar.gz
-  sha256: 433dc969d456a459c255c872ce4a8ec02bd6e25e33407a5c043e3a913e6a2138
+  sha256: 5fdd309655818f83a115d0130a720df6d536aac753d40bf1af93201a9d2d49ea
 
 build:
   entry_points:
